@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLTCModelStoreContainer" CdmEntityContainer="QLTCEntities">
+    <EntitySetMapping Name="TieuChis">
+      <EntityTypeMapping TypeName="QLTCModel.TieuChi">
+        <MappingFragment StoreEntitySet="TieuChi">
+          <ScalarProperty Name="MaTieuChi" ColumnName="MaTieuChi" />
+          <ScalarProperty Name="TenTieuChi" ColumnName="TenTieuChi" />
+          <ScalarProperty Name="MucDiem" ColumnName="MucDiem" />
+          <ScalarProperty Name="MaTieuChuan" ColumnName="MaTieuChuan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TieuChuans">
+      <EntityTypeMapping TypeName="QLTCModel.TieuChuan">
+        <MappingFragment StoreEntitySet="TieuChuan">
+          <ScalarProperty Name="MaTieuChuan" ColumnName="MaTieuChuan" />
+          <ScalarProperty Name="TenTieuChuan" ColumnName="TenTieuChuan" />
+          <ScalarProperty Name="DiemThuc" ColumnName="DiemThuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanLyTieuChuanTieuChiModelStoreContainer" CdmEntityContainer="QuanLyTieuChuanTieuChiEntities">
+    <EntitySetMapping Name="BoTieuChis">
+      <EntityTypeMapping TypeName="QuanLyTieuChuanTieuChiModel.BoTieuChi">
+        <MappingFragment StoreEntitySet="BoTieuChi">
+          <ScalarProperty Name="IDBoTieuChi" ColumnName="IDBoTieuChi" />
+          <ScalarProperty Name="HocKy" ColumnName="HocKy" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="MaNhom" ColumnName="MaNhom" />
+          <ScalarProperty Name="DiemNhom" ColumnName="DiemNhom" />
+          <ScalarProperty Name="IDNguoiTao" ColumnName="IDNguoiTao" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietBoTieuChis">
+      <EntityTypeMapping TypeName="QuanLyTieuChuanTieuChiModel.ChiTietBoTieuChi">
+        <MappingFragment StoreEntitySet="ChiTietBoTieuChi">
+          <ScalarProperty Name="IDChiTietBo" ColumnName="IDChiTietBo" />
+          <ScalarProperty Name="IDBoTieuChi" ColumnName="IDBoTieuChi" />
+          <ScalarProperty Name="MaTieuChi" ColumnName="MaTieuChi" />
+          <ScalarProperty Name="DiemTieuChi" ColumnName="DiemTieuChi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiemTuyChons">
+      <EntityTypeMapping TypeName="QuanLyTieuChuanTieuChiModel.DiemTuyChon">
+        <MappingFragment StoreEntitySet="DiemTuyChon">
+          <ScalarProperty Name="IDTuyChon" ColumnName="IDTuyChon" />
+          <ScalarProperty Name="IDChiTietBo" ColumnName="IDChiTietBo" />
+          <ScalarProperty Name="MaTuyChon" ColumnName="MaTuyChon" />
+          <ScalarProperty Name="DiemTuyChon1" ColumnName="DiemTuyChon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhomTieuChis">
+      <EntityTypeMapping TypeName="QuanLyTieuChuanTieuChiModel.NhomTieuChi">
+        <MappingFragment StoreEntitySet="NhomTieuChi">
+          <ScalarProperty Name="MaNhom" ColumnName="MaNhom" />
+          <ScalarProperty Name="TenNhom" ColumnName="TenNhom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoans">
+      <EntityTypeMapping TypeName="QuanLyTieuChuanTieuChiModel.TaiKhoan">
+        <MappingFragment StoreEntitySet="TaiKhoan">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="TenHienThi" ColumnName="TenHienThi" />
+          <ScalarProperty Name="LoaiTK" ColumnName="LoaiTK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TieuChis">
+      <EntityTypeMapping TypeName="QuanLyTieuChuanTieuChiModel.TieuChi">
+        <MappingFragment StoreEntitySet="TieuChi">
+          <ScalarProperty Name="MaTieuChi" ColumnName="MaTieuChi" />
+          <ScalarProperty Name="MaNhom" ColumnName="MaNhom" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="KieuHienThiTuyChon" ColumnName="KieuHienThiTuyChon" />
+          <ScalarProperty Name="MoTaTieuChi" ColumnName="MoTaTieuChi" />
+          <ScalarProperty Name="IDNguoiTao" ColumnName="IDNguoiTao" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TuyChonTieuChis">
+      <EntityTypeMapping TypeName="QuanLyTieuChuanTieuChiModel.TuyChonTieuChi">
+        <MappingFragment StoreEntitySet="TuyChonTieuChi">
+          <ScalarProperty Name="MaTuyChon" ColumnName="MaTuyChon" />
+          <ScalarProperty Name="MaTieuChi" ColumnName="MaTieuChi" />
+          <ScalarProperty Name="NoiDungTuyChon" ColumnName="NoiDungTuyChon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

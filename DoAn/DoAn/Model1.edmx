@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QLTCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TieuChi">
+          <Key>
+            <PropertyRef Name="MaTieuChi" />
+          </Key>
+          <Property Name="MaTieuChi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenTieuChi" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="MucDiem" Type="int" Nullable="false" />
+          <Property Name="MaTieuChuan" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TieuChuan">
+          <Key>
+            <PropertyRef Name="MaTieuChuan" />
+          </Key>
+          <Property Name="MaTieuChuan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenTieuChuan" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="DiemThuc" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__TieuChi__MaTieuC__534D60F1">
+          <End Role="TieuChuan" Type="Self.TieuChuan" Multiplicity="1" />
+          <End Role="TieuChi" Type="Self.TieuChi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TieuChuan">
+              <PropertyRef Name="MaTieuChuan" />
+            </Principal>
+            <Dependent Role="TieuChi">
+              <PropertyRef Name="MaTieuChuan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLTCModelStoreContainer">
+          <EntitySet Name="TieuChi" EntityType="Self.TieuChi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TieuChuan" EntityType="Self.TieuChuan" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__TieuChi__MaTieuC__534D60F1" Association="Self.FK__TieuChi__MaTieuC__534D60F1">
+            <End Role="TieuChuan" EntitySet="TieuChuan" />
+            <End Role="TieuChi" EntitySet="TieuChi" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLTCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TieuChi">
+          <Key>
+            <PropertyRef Name="MaTieuChi" />
+          </Key>
+          <Property Name="MaTieuChi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenTieuChi" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MucDiem" Type="Int32" Nullable="false" />
+          <Property Name="MaTieuChuan" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TieuChuan" Relationship="Self.FK__TieuChi__MaTieuC__534D60F1" FromRole="TieuChi" ToRole="TieuChuan" />
+        </EntityType>
+        <EntityType Name="TieuChuan">
+          <Key>
+            <PropertyRef Name="MaTieuChuan" />
+          </Key>
+          <Property Name="MaTieuChuan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenTieuChuan" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiemThuc" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TieuChis" Relationship="Self.FK__TieuChi__MaTieuC__534D60F1" FromRole="TieuChuan" ToRole="TieuChi" />
+        </EntityType>
+        <Association Name="FK__TieuChi__MaTieuC__534D60F1">
+          <End Role="TieuChuan" Type="Self.TieuChuan" Multiplicity="1" />
+          <End Role="TieuChi" Type="Self.TieuChi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TieuChuan">
+              <PropertyRef Name="MaTieuChuan" />
+            </Principal>
+            <Dependent Role="TieuChi">
+              <PropertyRef Name="MaTieuChuan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLTCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TieuChis" EntityType="Self.TieuChi" />
+          <EntitySet Name="TieuChuans" EntityType="Self.TieuChuan" />
+          <AssociationSet Name="FK__TieuChi__MaTieuC__534D60F1" Association="Self.FK__TieuChi__MaTieuC__534D60F1">
+            <End Role="TieuChuan" EntitySet="TieuChuans" />
+            <End Role="TieuChi" EntitySet="TieuChis" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLTCModelStoreContainer" CdmEntityContainer="QLTCEntities">
+          <EntitySetMapping Name="TieuChis">
+            <EntityTypeMapping TypeName="QLTCModel.TieuChi">
+              <MappingFragment StoreEntitySet="TieuChi">
+                <ScalarProperty Name="MaTieuChi" ColumnName="MaTieuChi" />
+                <ScalarProperty Name="TenTieuChi" ColumnName="TenTieuChi" />
+                <ScalarProperty Name="MucDiem" ColumnName="MucDiem" />
+                <ScalarProperty Name="MaTieuChuan" ColumnName="MaTieuChuan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TieuChuans">
+            <EntityTypeMapping TypeName="QLTCModel.TieuChuan">
+              <MappingFragment StoreEntitySet="TieuChuan">
+                <ScalarProperty Name="MaTieuChuan" ColumnName="MaTieuChuan" />
+                <ScalarProperty Name="TenTieuChuan" ColumnName="TenTieuChuan" />
+                <ScalarProperty Name="DiemThuc" ColumnName="DiemThuc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLTCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TieuChi">
+    <Key>
+      <PropertyRef Name="MaTieuChi" />
+    </Key>
+    <Property Name="MaTieuChi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTieuChi" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="MucDiem" Type="int" Nullable="false" />
+    <Property Name="MaTieuChuan" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TieuChuan">
+    <Key>
+      <PropertyRef Name="MaTieuChuan" />
+    </Key>
+    <Property Name="MaTieuChuan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTieuChuan" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="DiemThuc" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__TieuChi__MaTieuC__534D60F1">
+    <End Role="TieuChuan" Type="Self.TieuChuan" Multiplicity="1" />
+    <End Role="TieuChi" Type="Self.TieuChi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TieuChuan">
+        <PropertyRef Name="MaTieuChuan" />
+      </Principal>
+      <Dependent Role="TieuChi">
+        <PropertyRef Name="MaTieuChuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLTCModelStoreContainer">
+    <EntitySet Name="TieuChi" EntityType="Self.TieuChi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TieuChuan" EntityType="Self.TieuChuan" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__TieuChi__MaTieuC__534D60F1" Association="Self.FK__TieuChi__MaTieuC__534D60F1">
+      <End Role="TieuChuan" EntitySet="TieuChuan" />
+      <End Role="TieuChi" EntitySet="TieuChi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

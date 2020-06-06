@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLTCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TieuChi">
+    <Key>
+      <PropertyRef Name="MaTieuChi" />
+    </Key>
+    <Property Name="MaTieuChi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTieuChi" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MucDiem" Type="Int32" Nullable="false" />
+    <Property Name="MaTieuChuan" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TieuChuan" Relationship="Self.FK__TieuChi__MaTieuC__534D60F1" FromRole="TieuChi" ToRole="TieuChuan" />
+  </EntityType>
+  <EntityType Name="TieuChuan">
+    <Key>
+      <PropertyRef Name="MaTieuChuan" />
+    </Key>
+    <Property Name="MaTieuChuan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTieuChuan" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemThuc" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TieuChis" Relationship="Self.FK__TieuChi__MaTieuC__534D60F1" FromRole="TieuChuan" ToRole="TieuChi" />
+  </EntityType>
+  <Association Name="FK__TieuChi__MaTieuC__534D60F1">
+    <End Role="TieuChuan" Type="Self.TieuChuan" Multiplicity="1" />
+    <End Role="TieuChi" Type="Self.TieuChi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TieuChuan">
+        <PropertyRef Name="MaTieuChuan" />
+      </Principal>
+      <Dependent Role="TieuChi">
+        <PropertyRef Name="MaTieuChuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLTCEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TieuChis" EntityType="Self.TieuChi" />
+    <EntitySet Name="TieuChuans" EntityType="Self.TieuChuan" />
+    <AssociationSet Name="FK__TieuChi__MaTieuC__534D60F1" Association="Self.FK__TieuChi__MaTieuC__534D60F1">
+      <End Role="TieuChuan" EntitySet="TieuChuans" />
+      <End Role="TieuChi" EntitySet="TieuChis" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
