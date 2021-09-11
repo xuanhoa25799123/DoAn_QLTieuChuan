@@ -1,274 +1,468 @@
 ﻿namespace DoAn
 {
-    partial class UCTieuChi
-    {
-        /// <summary> 
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class UCTieuChi
+	{
+		/// <summary> 
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary> 
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Component Designer generated code
+		#region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+		/// <summary> 
+		/// Required method for Designer support - do not modify 
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTieuChi));
-			this.label3 = new System.Windows.Forms.Label();
-			this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.gcTieuChi = new DevExpress.XtraGrid.GridControl();
-			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-			this.btnSuaTieuChi = new DevExpress.XtraEditors.SimpleButton();
-			this.btnXoaTieuChi = new DevExpress.XtraEditors.SimpleButton();
-			this.btnThemTieuChi = new DevExpress.XtraEditors.SimpleButton();
-			this.radioButton1 = new System.Windows.Forms.RadioButton();
-			this.radioButton2 = new System.Windows.Forms.RadioButton();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.label5 = new System.Windows.Forms.Label();
-			this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
-			this.radioButton3 = new System.Windows.Forms.RadioButton();
-			((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gcTieuChi)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-			this.panel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
+			DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition3 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition4 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition5 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition6 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition7 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
+			DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
+			DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
+			DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
+			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.lueNhomTieuChi = new DevExpress.XtraEditors.LookUpEdit();
+			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+			this.btnTuyChon = new DevExpress.XtraEditors.SimpleButton();
+			this.grcTieuChi = new DevExpress.XtraGrid.GridControl();
+			this.gvTieuChi = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.lueKieuHienThi = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.lueNguoiTao = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+			this.btnThemTC = new DevExpress.XtraEditors.SimpleButton();
+			this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+			this.layoutControl1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.lueNhomTieuChi.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.grcTieuChi)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gvTieuChi)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lueKieuHienThi)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lueNguoiTao)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// label3
+			// layoutControl1
 			// 
-			this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(124, 89);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(113, 13);
-			this.label3.TabIndex = 21;
-			this.label3.Text = "Kiểu tuỳ chọn tiêu chí:";
+			this.layoutControl1.Controls.Add(this.lueNhomTieuChi);
+			this.layoutControl1.Controls.Add(this.labelControl2);
+			this.layoutControl1.Controls.Add(this.labelControl1);
+			this.layoutControl1.Controls.Add(this.btnTuyChon);
+			this.layoutControl1.Controls.Add(this.grcTieuChi);
+			this.layoutControl1.Controls.Add(this.btnThemTC);
+			this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+			this.layoutControl1.Name = "layoutControl1";
+			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 115, 650, 400);
+			this.layoutControl1.Root = this.Root;
+			this.layoutControl1.Size = new System.Drawing.Size(833, 394);
+			this.layoutControl1.TabIndex = 0;
+			this.layoutControl1.Text = "layoutControl1";
 			// 
-			// memoEdit1
+			// lueNhomTieuChi
 			// 
-			this.memoEdit1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.memoEdit1.Location = new System.Drawing.Point(255, 118);
-			this.memoEdit1.Name = "memoEdit1";
-			this.memoEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
-			this.memoEdit1.Properties.Appearance.Options.UseBackColor = true;
-			this.memoEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-			this.memoEdit1.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.memoEdit1.Size = new System.Drawing.Size(650, 41);
-			this.memoEdit1.TabIndex = 19;
-			// 
-			// label2
-			// 
-			this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(124, 120);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(53, 13);
-			this.label2.TabIndex = 18;
-			this.label2.Text = "Nội dung:";
-			// 
-			// label1
-			// 
-			this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(124, 59);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(75, 13);
-			this.label1.TabIndex = 17;
-			this.label1.Text = "Nhóm tiêu chí:";
-			// 
-			// gcTieuChi
-			// 
-			this.gcTieuChi.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.gcTieuChi.Location = new System.Drawing.Point(0, 264);
-			this.gcTieuChi.MainView = this.gridView1;
-			this.gcTieuChi.Name = "gcTieuChi";
-			this.gcTieuChi.Size = new System.Drawing.Size(950, 293);
-			this.gcTieuChi.TabIndex = 16;
-			this.gcTieuChi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-			// 
-			// gridView1
-			// 
-			this.gridView1.GridControl = this.gcTieuChi;
-			this.gridView1.Name = "gridView1";
-			this.gridView1.OptionsView.ShowGroupPanel = false;
-			// 
-			// comboBoxEdit1
-			// 
-			this.comboBoxEdit1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.comboBoxEdit1.Location = new System.Drawing.Point(255, 56);
-			this.comboBoxEdit1.Name = "comboBoxEdit1";
-			this.comboBoxEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
-			this.comboBoxEdit1.Properties.Appearance.Options.UseBackColor = true;
-			this.comboBoxEdit1.Properties.AutoHeight = false;
-			this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+			this.lueNhomTieuChi.Location = new System.Drawing.Point(596, 49);
+			this.lueNhomTieuChi.Name = "lueNhomTieuChi";
+			this.lueNhomTieuChi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.comboBoxEdit1.Size = new System.Drawing.Size(310, 20);
-			this.comboBoxEdit1.TabIndex = 20;
+			this.lueNhomTieuChi.Properties.DropDownItemHeight = 20;
+			this.lueNhomTieuChi.Properties.DropDownRows = 6;
+			this.lueNhomTieuChi.Properties.ShowHeader = false;
+			this.lueNhomTieuChi.Size = new System.Drawing.Size(225, 20);
+			this.lueNhomTieuChi.StyleController = this.layoutControl1;
+			this.lueNhomTieuChi.TabIndex = 13;
+			this.lueNhomTieuChi.EditValueChanged += new System.EventHandler(this.lueNhomTieuChi_EditValueChanged);
 			// 
-			// btnSuaTieuChi
+			// labelControl2
 			// 
-			this.btnSuaTieuChi.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnSuaTieuChi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaTieuChi.ImageOptions.Image")));
-			this.btnSuaTieuChi.Location = new System.Drawing.Point(789, 212);
-			this.btnSuaTieuChi.Name = "btnSuaTieuChi";
-			this.btnSuaTieuChi.Size = new System.Drawing.Size(116, 42);
-			this.btnSuaTieuChi.TabIndex = 27;
-			this.btnSuaTieuChi.Text = "Sửa tiêu chí";
+			this.labelControl2.Location = new System.Drawing.Point(12, 49);
+			this.labelControl2.Name = "labelControl2";
+			this.labelControl2.Size = new System.Drawing.Size(91, 13);
+			this.labelControl2.StyleController = this.layoutControl1;
+			this.labelControl2.TabIndex = 12;
+			this.labelControl2.Text = "Danh sách tiêu chí:";
 			// 
-			// btnXoaTieuChi
+			// labelControl1
 			// 
-			this.btnXoaTieuChi.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnXoaTieuChi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaTieuChi.ImageOptions.Image")));
-			this.btnXoaTieuChi.Location = new System.Drawing.Point(682, 211);
-			this.btnXoaTieuChi.Name = "btnXoaTieuChi";
-			this.btnXoaTieuChi.Size = new System.Drawing.Size(101, 42);
-			this.btnXoaTieuChi.TabIndex = 26;
-			this.btnXoaTieuChi.Text = "Xoá tiêu chí";
+			this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+			this.labelControl1.Appearance.Options.UseFont = true;
+			this.labelControl1.Location = new System.Drawing.Point(337, 12);
+			this.labelControl1.Name = "labelControl1";
+			this.labelControl1.Size = new System.Drawing.Size(172, 27);
+			this.labelControl1.StyleController = this.layoutControl1;
+			this.labelControl1.TabIndex = 11;
+			this.labelControl1.Text = "Quản lý tiêu chí";
 			// 
-			// btnThemTieuChi
+			// btnTuyChon
 			// 
-			this.btnThemTieuChi.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnThemTieuChi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemTieuChi.ImageOptions.Image")));
-			this.btnThemTieuChi.Location = new System.Drawing.Point(564, 211);
-			this.btnThemTieuChi.Name = "btnThemTieuChi";
-			this.btnThemTieuChi.Size = new System.Drawing.Size(112, 42);
-			this.btnThemTieuChi.TabIndex = 25;
-			this.btnThemTieuChi.Text = "Thêm tiêu chí";
+			this.btnTuyChon.Enabled = false;
+			this.btnTuyChon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTuyChon.ImageOptions.Image")));
+			this.btnTuyChon.Location = new System.Drawing.Point(499, 356);
+			this.btnTuyChon.Name = "btnTuyChon";
+			this.btnTuyChon.Size = new System.Drawing.Size(159, 22);
+			this.btnTuyChon.StyleController = this.layoutControl1;
+			this.btnTuyChon.TabIndex = 10;
+			this.btnTuyChon.Text = "Tùy chọn tiêu chí";
+			this.btnTuyChon.Click += new System.EventHandler(this.btnTuyChon_Click);
 			// 
-			// radioButton1
+			// grcTieuChi
 			// 
-			this.radioButton1.AutoSize = true;
-			this.radioButton1.Location = new System.Drawing.Point(3, 3);
-			this.radioButton1.Name = "radioButton1";
-			this.radioButton1.Size = new System.Drawing.Size(88, 17);
-			this.radioButton1.TabIndex = 28;
-			this.radioButton1.TabStop = true;
-			this.radioButton1.Text = "Single Choice";
-			this.radioButton1.UseVisualStyleBackColor = true;
+			this.grcTieuChi.Location = new System.Drawing.Point(12, 79);
+			this.grcTieuChi.MainView = this.gvTieuChi;
+			this.grcTieuChi.Name = "grcTieuChi";
+			this.grcTieuChi.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.lueNguoiTao,
+            this.lueKieuHienThi,
+            this.btnXoa});
+			this.grcTieuChi.Size = new System.Drawing.Size(809, 273);
+			this.grcTieuChi.TabIndex = 9;
+			this.grcTieuChi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvTieuChi});
 			// 
-			// radioButton2
+			// gvTieuChi
 			// 
-			this.radioButton2.AutoSize = true;
-			this.radioButton2.Location = new System.Drawing.Point(98, 3);
-			this.radioButton2.Name = "radioButton2";
-			this.radioButton2.Size = new System.Drawing.Size(96, 17);
-			this.radioButton2.TabIndex = 29;
-			this.radioButton2.TabStop = true;
-			this.radioButton2.Text = "Multiple Choice";
-			this.radioButton2.UseVisualStyleBackColor = true;
+			this.gvTieuChi.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn7,
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn8});
+			this.gvTieuChi.GridControl = this.grcTieuChi;
+			this.gvTieuChi.Name = "gvTieuChi";
+			this.gvTieuChi.OptionsView.ShowGroupPanel = false;
+			this.gvTieuChi.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvTieuChi_RowCellClick);
+			this.gvTieuChi.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.gvTieuChi_ShowingEditor);
+			this.gvTieuChi.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvTieuChi_CellValueChanged);
 			// 
-			// panel1
+			// gridColumn7
 			// 
-			this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.panel1.Controls.Add(this.radioButton1);
-			this.panel1.Controls.Add(this.radioButton3);
-			this.panel1.Controls.Add(this.radioButton2);
-			this.panel1.Location = new System.Drawing.Point(255, 82);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(257, 23);
-			this.panel1.TabIndex = 30;
+			this.gridColumn7.Caption = "gridColumn7";
+			this.gridColumn7.FieldName = "MaTieuChi";
+			this.gridColumn7.Name = "gridColumn7";
 			// 
-			// label5
+			// gridColumn1
 			// 
-			this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(124, 167);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(38, 13);
-			this.label5.TabIndex = 18;
-			this.label5.Text = "Mô tả:";
+			this.gridColumn1.Caption = "Mã nhóm tiêu chí";
+			this.gridColumn1.FieldName = "MaNhom";
+			this.gridColumn1.Name = "gridColumn1";
+			this.gridColumn1.Visible = true;
+			this.gridColumn1.VisibleIndex = 0;
+			this.gridColumn1.Width = 55;
 			// 
-			// memoEdit2
+			// gridColumn2
 			// 
-			this.memoEdit2.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.memoEdit2.Location = new System.Drawing.Point(255, 165);
-			this.memoEdit2.Name = "memoEdit2";
-			this.memoEdit2.Properties.Appearance.BackColor = System.Drawing.Color.White;
-			this.memoEdit2.Properties.Appearance.Options.UseBackColor = true;
-			this.memoEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-			this.memoEdit2.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.memoEdit2.Size = new System.Drawing.Size(650, 41);
-			this.memoEdit2.TabIndex = 19;
+			this.gridColumn2.Caption = "Nội dung tiêu chí";
+			this.gridColumn2.FieldName = "NoiDung";
+			this.gridColumn2.Name = "gridColumn2";
+			this.gridColumn2.Visible = true;
+			this.gridColumn2.VisibleIndex = 1;
+			this.gridColumn2.Width = 214;
 			// 
-			// radioButton3
+			// gridColumn3
 			// 
-			this.radioButton3.AutoSize = true;
-			this.radioButton3.Location = new System.Drawing.Point(200, 3);
-			this.radioButton3.Name = "radioButton3";
-			this.radioButton3.Size = new System.Drawing.Size(51, 17);
-			this.radioButton3.TabIndex = 29;
-			this.radioButton3.TabStop = true;
-			this.radioButton3.Text = "Input";
-			this.radioButton3.UseVisualStyleBackColor = true;
+			this.gridColumn3.Caption = "Kiểu hiển thị tùy chọn";
+			this.gridColumn3.ColumnEdit = this.lueKieuHienThi;
+			this.gridColumn3.FieldName = "KieuHienThiTuyChon";
+			this.gridColumn3.Name = "gridColumn3";
+			this.gridColumn3.Visible = true;
+			this.gridColumn3.VisibleIndex = 2;
+			this.gridColumn3.Width = 79;
 			// 
-			// UCTieuChi
+			// lueKieuHienThi
+			// 
+			this.lueKieuHienThi.AutoHeight = false;
+			this.lueKieuHienThi.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.lueKieuHienThi.DropDownRows = 3;
+			this.lueKieuHienThi.Name = "lueKieuHienThi";
+			this.lueKieuHienThi.ShowHeader = false;
+			// 
+			// gridColumn4
+			// 
+			this.gridColumn4.Caption = "Mô tả tiêu chí";
+			this.gridColumn4.FieldName = "MoTaTieuChi";
+			this.gridColumn4.Name = "gridColumn4";
+			this.gridColumn4.Visible = true;
+			this.gridColumn4.VisibleIndex = 3;
+			this.gridColumn4.Width = 237;
+			// 
+			// gridColumn5
+			// 
+			this.gridColumn5.Caption = "Người tạo";
+			this.gridColumn5.ColumnEdit = this.lueNguoiTao;
+			this.gridColumn5.FieldName = "IDNguoiTao";
+			this.gridColumn5.Name = "gridColumn5";
+			this.gridColumn5.Visible = true;
+			this.gridColumn5.VisibleIndex = 4;
+			this.gridColumn5.Width = 64;
+			// 
+			// lueNguoiTao
+			// 
+			this.lueNguoiTao.AutoHeight = false;
+			this.lueNguoiTao.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.lueNguoiTao.DropDownRows = 5;
+			this.lueNguoiTao.Name = "lueNguoiTao";
+			this.lueNguoiTao.ReadOnly = true;
+			this.lueNguoiTao.ShowHeader = false;
+			// 
+			// gridColumn6
+			// 
+			this.gridColumn6.Caption = "Ngày tạo";
+			this.gridColumn6.FieldName = "NgayTao";
+			this.gridColumn6.Name = "gridColumn6";
+			this.gridColumn6.Visible = true;
+			this.gridColumn6.VisibleIndex = 5;
+			this.gridColumn6.Width = 69;
+			// 
+			// gridColumn8
+			// 
+			this.gridColumn8.ColumnEdit = this.btnXoa;
+			this.gridColumn8.Name = "gridColumn8";
+			this.gridColumn8.Visible = true;
+			this.gridColumn8.VisibleIndex = 6;
+			this.gridColumn8.Width = 20;
+			// 
+			// btnXoa
+			// 
+			this.btnXoa.AutoHeight = false;
+			editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+			this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+			this.btnXoa.Name = "btnXoa";
+			this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+			// 
+			// btnThemTC
+			// 
+			this.btnThemTC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemTC.ImageOptions.Image")));
+			this.btnThemTC.Location = new System.Drawing.Point(662, 356);
+			this.btnThemTC.Name = "btnThemTC";
+			this.btnThemTC.Size = new System.Drawing.Size(159, 22);
+			this.btnThemTC.StyleController = this.layoutControl1;
+			this.btnThemTC.TabIndex = 8;
+			this.btnThemTC.Text = "Thêm tiêu chí";
+			this.btnThemTC.Click += new System.EventHandler(this.btnThemTC_Click);
+			// 
+			// Root
+			// 
+			this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+			this.Root.GroupBordersVisible = false;
+			this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem9,
+            this.layoutControlItem6,
+            this.layoutControlItem10,
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem11});
+			this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
+			this.Root.Name = "Root";
+			columnDefinition1.SizeType = System.Windows.Forms.SizeType.Percent;
+			columnDefinition1.Width = 20D;
+			columnDefinition2.SizeType = System.Windows.Forms.SizeType.Percent;
+			columnDefinition2.Width = 10D;
+			columnDefinition3.SizeType = System.Windows.Forms.SizeType.Percent;
+			columnDefinition3.Width = 10D;
+			columnDefinition4.SizeType = System.Windows.Forms.SizeType.Percent;
+			columnDefinition4.Width = 10D;
+			columnDefinition5.SizeType = System.Windows.Forms.SizeType.Percent;
+			columnDefinition5.Width = 10D;
+			columnDefinition6.SizeType = System.Windows.Forms.SizeType.Percent;
+			columnDefinition6.Width = 20D;
+			columnDefinition7.SizeType = System.Windows.Forms.SizeType.Percent;
+			columnDefinition7.Width = 20D;
+			this.Root.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
+            columnDefinition1,
+            columnDefinition2,
+            columnDefinition3,
+            columnDefinition4,
+            columnDefinition5,
+            columnDefinition6,
+            columnDefinition7});
+			rowDefinition1.Height = 10D;
+			rowDefinition1.SizeType = System.Windows.Forms.SizeType.Percent;
+			rowDefinition2.Height = 8D;
+			rowDefinition2.SizeType = System.Windows.Forms.SizeType.Percent;
+			rowDefinition3.Height = 74D;
+			rowDefinition3.SizeType = System.Windows.Forms.SizeType.Percent;
+			rowDefinition4.Height = 8D;
+			rowDefinition4.SizeType = System.Windows.Forms.SizeType.Percent;
+			this.Root.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
+            rowDefinition1,
+            rowDefinition2,
+            rowDefinition3,
+            rowDefinition4});
+			this.Root.Size = new System.Drawing.Size(833, 394);
+			this.Root.TextVisible = false;
+			// 
+			// layoutControlItem9
+			// 
+			this.layoutControlItem9.Control = this.grcTieuChi;
+			this.layoutControlItem9.Location = new System.Drawing.Point(0, 67);
+			this.layoutControlItem9.Name = "layoutControlItem9";
+			this.layoutControlItem9.OptionsTableLayoutItem.ColumnSpan = 7;
+			this.layoutControlItem9.OptionsTableLayoutItem.RowIndex = 2;
+			this.layoutControlItem9.Size = new System.Drawing.Size(813, 277);
+			this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem9.TextVisible = false;
+			// 
+			// layoutControlItem6
+			// 
+			this.layoutControlItem6.Control = this.btnThemTC;
+			this.layoutControlItem6.Location = new System.Drawing.Point(650, 344);
+			this.layoutControlItem6.Name = "layoutControlItem6";
+			this.layoutControlItem6.OptionsTableLayoutItem.ColumnIndex = 6;
+			this.layoutControlItem6.OptionsTableLayoutItem.RowIndex = 3;
+			this.layoutControlItem6.Size = new System.Drawing.Size(163, 30);
+			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem6.TextVisible = false;
+			// 
+			// layoutControlItem10
+			// 
+			this.layoutControlItem10.Control = this.btnTuyChon;
+			this.layoutControlItem10.Location = new System.Drawing.Point(487, 344);
+			this.layoutControlItem10.Name = "layoutControlItem10";
+			this.layoutControlItem10.OptionsTableLayoutItem.ColumnIndex = 5;
+			this.layoutControlItem10.OptionsTableLayoutItem.RowIndex = 3;
+			this.layoutControlItem10.Size = new System.Drawing.Size(163, 30);
+			this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem10.TextVisible = false;
+			// 
+			// layoutControlItem1
+			// 
+			this.layoutControlItem1.Control = this.labelControl2;
+			this.layoutControlItem1.Location = new System.Drawing.Point(0, 37);
+			this.layoutControlItem1.Name = "layoutControlItem1";
+			this.layoutControlItem1.OptionsTableLayoutItem.RowIndex = 1;
+			this.layoutControlItem1.Size = new System.Drawing.Size(163, 30);
+			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem1.TextVisible = false;
+			// 
+			// layoutControlItem2
+			// 
+			this.layoutControlItem2.Control = this.lueNhomTieuChi;
+			this.layoutControlItem2.Location = new System.Drawing.Point(487, 37);
+			this.layoutControlItem2.Name = "layoutControlItem2";
+			this.layoutControlItem2.OptionsTableLayoutItem.ColumnIndex = 5;
+			this.layoutControlItem2.OptionsTableLayoutItem.ColumnSpan = 2;
+			this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 1;
+			this.layoutControlItem2.Size = new System.Drawing.Size(326, 30);
+			this.layoutControlItem2.Text = "Hiển thị theo nhóm:";
+			this.layoutControlItem2.TextSize = new System.Drawing.Size(94, 13);
+			// 
+			// layoutControlItem11
+			// 
+			this.layoutControlItem11.Control = this.labelControl1;
+			this.layoutControlItem11.Location = new System.Drawing.Point(325, 0);
+			this.layoutControlItem11.Name = "layoutControlItem11";
+			this.layoutControlItem11.OptionsTableLayoutItem.ColumnIndex = 3;
+			this.layoutControlItem11.OptionsTableLayoutItem.ColumnSpan = 3;
+			this.layoutControlItem11.Size = new System.Drawing.Size(325, 37);
+			this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem11.TextVisible = false;
+			// 
+			// XtraUserControl1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.btnSuaTieuChi);
-			this.Controls.Add(this.btnXoaTieuChi);
-			this.Controls.Add(this.btnThemTieuChi);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.memoEdit2);
-			this.Controls.Add(this.memoEdit1);
-			this.Controls.Add(this.label5);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.gcTieuChi);
-			this.Controls.Add(this.comboBoxEdit1);
-			this.Controls.Add(this.panel1);
-			this.Name = "UCTieuChi";
-			this.Size = new System.Drawing.Size(950, 557);
-			this.Load += new System.EventHandler(this.UCTieuChi_Load);
-			((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gcTieuChi)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-			this.panel1.ResumeLayout(false);
-			this.panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
+			this.Controls.Add(this.layoutControl1);
+			this.Name = "XtraUserControl1";
+			this.Size = new System.Drawing.Size(833, 394);
+			this.Load += new System.EventHandler(this.XtraUserControl1_Load);
+			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+			this.layoutControl1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.lueNhomTieuChi.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.grcTieuChi)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gvTieuChi)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lueKieuHienThi)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lueNguoiTao)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
-        }
+		}
 
-        #endregion
+		#endregion
 
-        private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraGrid.GridControl gcTieuChi;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-		private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private DevExpress.XtraEditors.SimpleButton btnSuaTieuChi;
-        private DevExpress.XtraEditors.SimpleButton btnXoaTieuChi;
-        private DevExpress.XtraEditors.SimpleButton btnThemTieuChi;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.RadioButton radioButton3;
-		private System.Windows.Forms.Label label5;
-		private DevExpress.XtraEditors.MemoEdit memoEdit2;
-    }
+		private DevExpress.XtraLayout.LayoutControl layoutControl1;
+		private DevExpress.XtraLayout.LayoutControlGroup Root;
+		private DevExpress.XtraGrid.GridControl grcTieuChi;
+		private DevExpress.XtraGrid.Views.Grid.GridView gvTieuChi;
+		private DevExpress.XtraEditors.SimpleButton btnThemTC;
+		private DevExpress.XtraEditors.SimpleButton btnTuyChon;
+		private DevExpress.XtraEditors.LabelControl labelControl1;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+		private DevExpress.XtraEditors.LookUpEdit lueNhomTieuChi;
+		private DevExpress.XtraEditors.LabelControl labelControl2;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueKieuHienThi;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueNguoiTao;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+		private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+	}
 }

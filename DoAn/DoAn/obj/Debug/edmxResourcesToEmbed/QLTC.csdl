@@ -7,13 +7,11 @@
     <Property Name="IDBoTieuChi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="HocKy" Type="Int32" Nullable="false" />
     <Property Name="NamHoc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="MaNhom" Type="Int32" />
-    <Property Name="DiemNhom" Type="Int32" Nullable="false" />
     <Property Name="IDNguoiTao" Type="Int32" />
     <Property Name="NgayTao" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__BoTieuChi__IDNgu__1CF15040" FromRole="BoTieuChi" ToRole="TaiKhoan" />
-    <NavigationProperty Name="NhomTieuChi" Relationship="Self.FK__BoTieuChi__MaNho__1BFD2C07" FromRole="BoTieuChi" ToRole="NhomTieuChi" />
-    <NavigationProperty Name="ChiTietBoTieuChis" Relationship="Self.FK__ChiTietBo__IDBoT__20C1E124" FromRole="BoTieuChi" ToRole="ChiTietBoTieuChi" />
+    <Property Name="isActive" Type="Int32" />
+    <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__BoTieuChi__IDNgu__1BFD2C07" FromRole="BoTieuChi" ToRole="TaiKhoan" />
+    <NavigationProperty Name="ChiTietBoTieuChis" Relationship="Self.FK__ChiTietBo__IDBoT__1ED998B2" FromRole="BoTieuChi" ToRole="ChiTietBoTieuChi" />
   </EntityType>
   <EntityType Name="ChiTietBoTieuChi">
     <Key>
@@ -23,9 +21,10 @@
     <Property Name="IDBoTieuChi" Type="Int32" />
     <Property Name="MaTieuChi" Type="Int32" />
     <Property Name="DiemTieuChi" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="BoTieuChi" Relationship="Self.FK__ChiTietBo__IDBoT__20C1E124" FromRole="ChiTietBoTieuChi" ToRole="BoTieuChi" />
-    <NavigationProperty Name="TieuChi" Relationship="Self.FK__ChiTietBo__MaTie__21B6055D" FromRole="ChiTietBoTieuChi" ToRole="TieuChi" />
-    <NavigationProperty Name="DiemTuyChons" Relationship="Self.FK__DiemTuyCh__IDChi__24927208" FromRole="ChiTietBoTieuChi" ToRole="DiemTuyChon" />
+    <Property Name="DiemMin" Type="Int32" />
+    <NavigationProperty Name="BoTieuChi" Relationship="Self.FK__ChiTietBo__IDBoT__1ED998B2" FromRole="ChiTietBoTieuChi" ToRole="BoTieuChi" />
+    <NavigationProperty Name="TieuChi" Relationship="Self.FK__ChiTietBo__MaTie__1FCDBCEB" FromRole="ChiTietBoTieuChi" ToRole="TieuChi" />
+    <NavigationProperty Name="DiemTuyChons" Relationship="Self.FK__DiemTuyCh__IDChi__22AA2996" FromRole="ChiTietBoTieuChi" ToRole="DiemTuyChon" />
   </EntityType>
   <EntityType Name="DiemTuyChon">
     <Key>
@@ -35,8 +34,8 @@
     <Property Name="IDChiTietBo" Type="Int32" />
     <Property Name="MaTuyChon" Type="Int32" />
     <Property Name="DiemTuyChon1" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="ChiTietBoTieuChi" Relationship="Self.FK__DiemTuyCh__IDChi__24927208" FromRole="DiemTuyChon" ToRole="ChiTietBoTieuChi" />
-    <NavigationProperty Name="TuyChonTieuChi" Relationship="Self.FK__DiemTuyCh__MaTuy__25869641" FromRole="DiemTuyChon" ToRole="TuyChonTieuChi" />
+    <NavigationProperty Name="ChiTietBoTieuChi" Relationship="Self.FK__DiemTuyCh__IDChi__22AA2996" FromRole="DiemTuyChon" ToRole="ChiTietBoTieuChi" />
+    <NavigationProperty Name="TuyChonTieuChi" Relationship="Self.FK__DiemTuyCh__MaTuy__239E4DCF" FromRole="DiemTuyChon" ToRole="TuyChonTieuChi" />
   </EntityType>
   <EntityType Name="NhomTieuChi">
     <Key>
@@ -44,7 +43,6 @@
     </Key>
     <Property Name="MaNhom" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TenNhom" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="BoTieuChis" Relationship="Self.FK__BoTieuChi__MaNho__1BFD2C07" FromRole="NhomTieuChi" ToRole="BoTieuChi" />
     <NavigationProperty Name="TieuChis" Relationship="Self.FK__TieuChi__MaNhom__145C0A3F" FromRole="NhomTieuChi" ToRole="TieuChi" />
   </EntityType>
   <EntityType Name="TaiKhoan">
@@ -56,7 +54,7 @@
     <Property Name="MatKhau" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="TenHienThi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="LoaiTK" Type="Int32" />
-    <NavigationProperty Name="BoTieuChis" Relationship="Self.FK__BoTieuChi__IDNgu__1CF15040" FromRole="TaiKhoan" ToRole="BoTieuChi" />
+    <NavigationProperty Name="BoTieuChis" Relationship="Self.FK__BoTieuChi__IDNgu__1BFD2C07" FromRole="TaiKhoan" ToRole="BoTieuChi" />
     <NavigationProperty Name="TieuChis" Relationship="Self.FK__TieuChi__IDNguoi__15502E78" FromRole="TaiKhoan" ToRole="TieuChi" />
   </EntityType>
   <EntityType Name="TieuChi">
@@ -70,7 +68,7 @@
     <Property Name="MoTaTieuChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="IDNguoiTao" Type="Int32" Nullable="false" />
     <Property Name="NgayTao" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="ChiTietBoTieuChis" Relationship="Self.FK__ChiTietBo__MaTie__21B6055D" FromRole="TieuChi" ToRole="ChiTietBoTieuChi" />
+    <NavigationProperty Name="ChiTietBoTieuChis" Relationship="Self.FK__ChiTietBo__MaTie__1FCDBCEB" FromRole="TieuChi" ToRole="ChiTietBoTieuChi" />
     <NavigationProperty Name="NhomTieuChi" Relationship="Self.FK__TieuChi__MaNhom__145C0A3F" FromRole="TieuChi" ToRole="NhomTieuChi" />
     <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__TieuChi__IDNguoi__15502E78" FromRole="TieuChi" ToRole="TaiKhoan" />
     <NavigationProperty Name="TuyChonTieuChis" Relationship="Self.FK__TuyChonTi__MaTie__182C9B23" FromRole="TieuChi" ToRole="TuyChonTieuChi" />
@@ -82,10 +80,10 @@
     <Property Name="MaTuyChon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MaTieuChi" Type="Int32" />
     <Property Name="NoiDungTuyChon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="DiemTuyChons" Relationship="Self.FK__DiemTuyCh__MaTuy__25869641" FromRole="TuyChonTieuChi" ToRole="DiemTuyChon" />
+    <NavigationProperty Name="DiemTuyChons" Relationship="Self.FK__DiemTuyCh__MaTuy__239E4DCF" FromRole="TuyChonTieuChi" ToRole="DiemTuyChon" />
     <NavigationProperty Name="TieuChi" Relationship="Self.FK__TuyChonTi__MaTie__182C9B23" FromRole="TuyChonTieuChi" ToRole="TieuChi" />
   </EntityType>
-  <Association Name="FK__BoTieuChi__IDNgu__1CF15040">
+  <Association Name="FK__BoTieuChi__IDNgu__1BFD2C07">
     <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
     <End Role="BoTieuChi" Type="Self.BoTieuChi" Multiplicity="*" />
     <ReferentialConstraint>
@@ -97,19 +95,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BoTieuChi__MaNho__1BFD2C07">
-    <End Role="NhomTieuChi" Type="Self.NhomTieuChi" Multiplicity="0..1" />
-    <End Role="BoTieuChi" Type="Self.BoTieuChi" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhomTieuChi">
-        <PropertyRef Name="MaNhom" />
-      </Principal>
-      <Dependent Role="BoTieuChi">
-        <PropertyRef Name="MaNhom" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietBo__IDBoT__20C1E124">
+  <Association Name="FK__ChiTietBo__IDBoT__1ED998B2">
     <End Role="BoTieuChi" Type="Self.BoTieuChi" Multiplicity="0..1" />
     <End Role="ChiTietBoTieuChi" Type="Self.ChiTietBoTieuChi" Multiplicity="*" />
     <ReferentialConstraint>
@@ -121,7 +107,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietBo__MaTie__21B6055D">
+  <Association Name="FK__ChiTietBo__MaTie__1FCDBCEB">
     <End Role="TieuChi" Type="Self.TieuChi" Multiplicity="0..1" />
     <End Role="ChiTietBoTieuChi" Type="Self.ChiTietBoTieuChi" Multiplicity="*" />
     <ReferentialConstraint>
@@ -133,7 +119,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DiemTuyCh__IDChi__24927208">
+  <Association Name="FK__DiemTuyCh__IDChi__22AA2996">
     <End Role="ChiTietBoTieuChi" Type="Self.ChiTietBoTieuChi" Multiplicity="0..1" />
     <End Role="DiemTuyChon" Type="Self.DiemTuyChon" Multiplicity="*" />
     <ReferentialConstraint>
@@ -145,7 +131,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DiemTuyCh__MaTuy__25869641">
+  <Association Name="FK__DiemTuyCh__MaTuy__239E4DCF">
     <End Role="TuyChonTieuChi" Type="Self.TuyChonTieuChi" Multiplicity="0..1" />
     <End Role="DiemTuyChon" Type="Self.DiemTuyChon" Multiplicity="*" />
     <ReferentialConstraint>
@@ -193,7 +179,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="QuanLyTieuChuanTieuChiEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="QLTCTC" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="BoTieuChis" EntityType="Self.BoTieuChi" />
     <EntitySet Name="ChiTietBoTieuChis" EntityType="Self.ChiTietBoTieuChi" />
     <EntitySet Name="DiemTuyChons" EntityType="Self.DiemTuyChon" />
@@ -201,27 +187,23 @@
     <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
     <EntitySet Name="TieuChis" EntityType="Self.TieuChi" />
     <EntitySet Name="TuyChonTieuChis" EntityType="Self.TuyChonTieuChi" />
-    <AssociationSet Name="FK__BoTieuChi__IDNgu__1CF15040" Association="Self.FK__BoTieuChi__IDNgu__1CF15040">
+    <AssociationSet Name="FK__BoTieuChi__IDNgu__1BFD2C07" Association="Self.FK__BoTieuChi__IDNgu__1BFD2C07">
       <End Role="TaiKhoan" EntitySet="TaiKhoans" />
       <End Role="BoTieuChi" EntitySet="BoTieuChis" />
     </AssociationSet>
-    <AssociationSet Name="FK__BoTieuChi__MaNho__1BFD2C07" Association="Self.FK__BoTieuChi__MaNho__1BFD2C07">
-      <End Role="NhomTieuChi" EntitySet="NhomTieuChis" />
-      <End Role="BoTieuChi" EntitySet="BoTieuChis" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ChiTietBo__IDBoT__20C1E124" Association="Self.FK__ChiTietBo__IDBoT__20C1E124">
+    <AssociationSet Name="FK__ChiTietBo__IDBoT__1ED998B2" Association="Self.FK__ChiTietBo__IDBoT__1ED998B2">
       <End Role="BoTieuChi" EntitySet="BoTieuChis" />
       <End Role="ChiTietBoTieuChi" EntitySet="ChiTietBoTieuChis" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietBo__MaTie__21B6055D" Association="Self.FK__ChiTietBo__MaTie__21B6055D">
+    <AssociationSet Name="FK__ChiTietBo__MaTie__1FCDBCEB" Association="Self.FK__ChiTietBo__MaTie__1FCDBCEB">
       <End Role="TieuChi" EntitySet="TieuChis" />
       <End Role="ChiTietBoTieuChi" EntitySet="ChiTietBoTieuChis" />
     </AssociationSet>
-    <AssociationSet Name="FK__DiemTuyCh__IDChi__24927208" Association="Self.FK__DiemTuyCh__IDChi__24927208">
+    <AssociationSet Name="FK__DiemTuyCh__IDChi__22AA2996" Association="Self.FK__DiemTuyCh__IDChi__22AA2996">
       <End Role="ChiTietBoTieuChi" EntitySet="ChiTietBoTieuChis" />
       <End Role="DiemTuyChon" EntitySet="DiemTuyChons" />
     </AssociationSet>
-    <AssociationSet Name="FK__DiemTuyCh__MaTuy__25869641" Association="Self.FK__DiemTuyCh__MaTuy__25869641">
+    <AssociationSet Name="FK__DiemTuyCh__MaTuy__239E4DCF" Association="Self.FK__DiemTuyCh__MaTuy__239E4DCF">
       <End Role="TuyChonTieuChi" EntitySet="TuyChonTieuChis" />
       <End Role="DiemTuyChon" EntitySet="DiemTuyChons" />
     </AssociationSet>

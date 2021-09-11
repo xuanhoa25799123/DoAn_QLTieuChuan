@@ -28,12 +28,13 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThemTieuChi_TuyChon));
 			DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
 			DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
+			DevExpress.XtraLayout.ColumnDefinition columnDefinition3 = new DevExpress.XtraLayout.ColumnDefinition();
 			DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
 			DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
 			DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThemTieuChi_TuyChon));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
 			this.btnOK = new DevExpress.XtraEditors.SimpleButton();
 			this.grcTieuChi = new DevExpress.XtraGrid.GridControl();
@@ -48,6 +49,8 @@
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnThemTieuChi = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.grcTieuChi)).BeginInit();
@@ -58,10 +61,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.btnThemTieuChi);
 			this.layoutControl1.Controls.Add(this.btnOK);
 			this.layoutControl1.Controls.Add(this.grcTieuChi);
 			this.layoutControl1.Controls.Add(this.txtNhomTieuChi);
@@ -82,6 +87,7 @@
 			this.btnOK.StyleController = this.layoutControl1;
 			this.btnOK.TabIndex = 6;
 			this.btnOK.Text = "Chọn";
+			this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
 			// 
 			// grcTieuChi
 			// 
@@ -104,6 +110,9 @@
             this.gridColumn5});
 			this.gvTieuChi.GridControl = this.grcTieuChi;
 			this.gvTieuChi.Name = "gvTieuChi";
+			this.gvTieuChi.OptionsBehavior.Editable = false;
+			this.gvTieuChi.OptionsBehavior.ReadOnly = true;
+			this.gvTieuChi.OptionsSelection.MultiSelect = true;
 			this.gvTieuChi.OptionsView.ShowGroupPanel = false;
 			// 
 			// gridColumn1
@@ -162,16 +171,20 @@
 			this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem2,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutControlItem4});
 			this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
 			this.Root.Name = "Root";
 			columnDefinition1.SizeType = System.Windows.Forms.SizeType.Percent;
-			columnDefinition1.Width = 80D;
+			columnDefinition1.Width = 60D;
 			columnDefinition2.SizeType = System.Windows.Forms.SizeType.Percent;
 			columnDefinition2.Width = 20D;
+			columnDefinition3.SizeType = System.Windows.Forms.SizeType.Percent;
+			columnDefinition3.Width = 20D;
 			this.Root.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
             columnDefinition1,
-            columnDefinition2});
+            columnDefinition2,
+            columnDefinition3});
 			rowDefinition1.Height = 10D;
 			rowDefinition1.SizeType = System.Windows.Forms.SizeType.Percent;
 			rowDefinition2.Height = 80D;
@@ -190,7 +203,7 @@
 			this.layoutControlItem1.Control = this.txtNhomTieuChi;
 			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.OptionsTableLayoutItem.ColumnSpan = 2;
+			this.layoutControlItem1.OptionsTableLayoutItem.ColumnSpan = 3;
 			this.layoutControlItem1.Size = new System.Drawing.Size(798, 36);
 			this.layoutControlItem1.Text = "Nhóm tiêu chí:";
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(68, 13);
@@ -200,7 +213,7 @@
 			this.layoutControlItem2.Control = this.grcTieuChi;
 			this.layoutControlItem2.Location = new System.Drawing.Point(0, 36);
 			this.layoutControlItem2.Name = "layoutControlItem2";
-			this.layoutControlItem2.OptionsTableLayoutItem.ColumnSpan = 2;
+			this.layoutControlItem2.OptionsTableLayoutItem.ColumnSpan = 3;
 			this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 1;
 			this.layoutControlItem2.Size = new System.Drawing.Size(798, 290);
 			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -211,11 +224,33 @@
 			this.layoutControlItem3.Control = this.btnOK;
 			this.layoutControlItem3.Location = new System.Drawing.Point(638, 326);
 			this.layoutControlItem3.Name = "layoutControlItem3";
-			this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 1;
+			this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 2;
 			this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 2;
 			this.layoutControlItem3.Size = new System.Drawing.Size(160, 37);
 			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem3.TextVisible = false;
+			// 
+			// btnThemTieuChi
+			// 
+			this.btnThemTieuChi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemTieuChi.ImageOptions.Image")));
+			this.btnThemTieuChi.Location = new System.Drawing.Point(490, 338);
+			this.btnThemTieuChi.Name = "btnThemTieuChi";
+			this.btnThemTieuChi.Size = new System.Drawing.Size(156, 22);
+			this.btnThemTieuChi.StyleController = this.layoutControl1;
+			this.btnThemTieuChi.TabIndex = 7;
+			this.btnThemTieuChi.Text = "Thêm tiêu chí";
+			this.btnThemTieuChi.Click += new System.EventHandler(this.btnThemTieuChi_Click);
+			// 
+			// layoutControlItem4
+			// 
+			this.layoutControlItem4.Control = this.btnThemTieuChi;
+			this.layoutControlItem4.Location = new System.Drawing.Point(478, 326);
+			this.layoutControlItem4.Name = "layoutControlItem4";
+			this.layoutControlItem4.OptionsTableLayoutItem.ColumnIndex = 1;
+			this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 2;
+			this.layoutControlItem4.Size = new System.Drawing.Size(160, 37);
+			this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem4.TextVisible = false;
 			// 
 			// FrmThemTieuChi_TuyChon
 			// 
@@ -236,6 +271,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -256,5 +292,7 @@
 		private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
 		private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
 		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueKieuHienThi;
+		private DevExpress.XtraEditors.SimpleButton btnThemTieuChi;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
 	}
 }

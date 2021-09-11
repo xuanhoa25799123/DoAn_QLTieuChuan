@@ -261,6 +261,9 @@
 			this.Ribbon = this.ribbon;
 			this.StatusBar = this.ribbonStatusBar;
 			this.Text = "Quản lý tiêu chí tiêu chuẩn sinh viên";
+			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
 			this.ResumeLayout(false);

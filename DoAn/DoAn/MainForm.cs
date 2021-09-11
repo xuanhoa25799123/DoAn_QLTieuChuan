@@ -14,19 +14,34 @@ namespace DoAn
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+		
         public MainForm()
         {
             InitializeComponent();
         }
-		private void ResetContainer()
+
+		public static TaiKhoan tk;
+		public MainForm(TaiKhoan tk)
 		{
-			container.Controls.Remove(UCDoiMatKhau.Instance);
-			container.Controls.Remove(UCTieuChi.Instance);
-			container.Controls.Remove(UCNhomTieuChi.Instance);
-			container.Controls.Remove(UCThongTinTK.Instance);
+			MainForm.tk = tk;
+			InitializeComponent();
+		}
+
+		public void LoadTatCa()
+		{
+			UCQLTieuChi.Instance.LoadDuLieu();
+			UCNhomTieuChi.Instance.LoadDuLieu();
+			UCTrangChu.Instance.LoadDuLieu();
+			UCTaoBoTieuChi.Instance.LoadDuLieu();
+		}
+
+		public void ThemDS(List<int> DSMa)
+		{
+			UCTaoBoTieuChi.Instance.DSMa = DSMa;
 		}
         private void btnXem_ItemClick(object sender, ItemClickEventArgs e)
         {
+
 			if (!container.Controls.Contains(UCTrangChu.Instance))
 			{
 				container.Controls.Add(UCTrangChu.Instance);
@@ -34,7 +49,6 @@ namespace DoAn
 				UCTrangChu.Instance.BringToFront();
 			}
 			UCTrangChu.Instance.BringToFront();
-			//ResetContainer();
         }
 
         private void btnXemTK_ItemClick(object sender, ItemClickEventArgs e)
@@ -52,9 +66,11 @@ namespace DoAn
 
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
+			container.Controls.Clear();
 			this.Hide();
-            FormDangNhap f = new FormDangNhap();
-            f.Show();
+			FormDangNhap frm = new FormDangNhap();
+			frm.Show();
+			LoadTatCa();
         }
 
       
@@ -72,13 +88,13 @@ namespace DoAn
 
         private void btnTieuChi_ItemClick(object sender, ItemClickEventArgs e)
         {
-			if (!container.Controls.Contains(XtraUserControl1.Instance))
+			if (!container.Controls.Contains(UCQLTieuChi.Instance))
 			{
-				container.Controls.Add(XtraUserControl1.Instance);
-				XtraUserControl1.Instance.Dock = DockStyle.Fill;
-				XtraUserControl1.Instance.BringToFront();
+				container.Controls.Add(UCQLTieuChi.Instance);
+				UCQLTieuChi.Instance.Dock = DockStyle.Fill;
+				UCQLTieuChi.Instance.BringToFront();
 			}
-			XtraUserControl1.Instance.BringToFront();
+			UCQLTieuChi.Instance.BringToFront();
 			//if (!container.Controls.Contains(UCTieuChi.Instance))
 			//{
 			//	container.Controls.Add(UCTieuChi.Instance);
@@ -90,6 +106,10 @@ namespace DoAn
 
 		private void MainForm_Load(object sender, EventArgs e)
 		{
+			if (tk.LoaiTK != 0)
+				btnQLTaiKhoan.Enabled = false;
+			else
+				btnQLTaiKhoan.Enabled = true;
 			if (!container.Controls.Contains(UCTrangChu.Instance))
 			{
 				container.Controls.Add(UCTrangChu.Instance);
@@ -112,13 +132,13 @@ namespace DoAn
 
 		private void btnQLTieuChi_ItemClick(object sender, ItemClickEventArgs e)
 		{
-			if (!container.Controls.Contains(XtraUserControl1.Instance))
+			if (!container.Controls.Contains(UCQLTieuChi.Instance))
 			{
-				container.Controls.Add(XtraUserControl1.Instance);
-				XtraUserControl1.Instance.Dock = DockStyle.Fill;
-				XtraUserControl1.Instance.BringToFront();
+				container.Controls.Add(UCQLTieuChi.Instance);
+				UCQLTieuChi.Instance.Dock = DockStyle.Fill;
+				UCQLTieuChi.Instance.BringToFront();
 			}
-			XtraUserControl1.Instance.BringToFront();
+			UCQLTieuChi.Instance.BringToFront();
 		}
 
 		private void btnQLTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
@@ -141,6 +161,17 @@ namespace DoAn
 				UCTaoBoTieuChi.Instance.BringToFront();
 			}
 			UCTaoBoTieuChi.Instance.BringToFront();
+		}
+
+		private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Application.Exit();
+			
+		}
+
+		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			container.Controls.Clear();
 		}
     }
 }

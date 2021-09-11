@@ -16,14 +16,12 @@ namespace DoAn
     {
         public NhomTieuChi()
         {
-            this.BoTieuChis = new HashSet<BoTieuChi>();
             this.TieuChis = new HashSet<TieuChi>();
         }
     
         public int MaNhom { get; set; }
         public string TenNhom { get; set; }
     
-        public virtual ICollection<BoTieuChi> BoTieuChis { get; set; }
         public virtual ICollection<TieuChi> TieuChis { get; set; }
     }
 }

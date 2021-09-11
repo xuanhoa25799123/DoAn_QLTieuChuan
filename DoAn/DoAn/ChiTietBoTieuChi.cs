@@ -23,6 +23,7 @@ namespace DoAn
         public Nullable<int> IDBoTieuChi { get; set; }
         public Nullable<int> MaTieuChi { get; set; }
         public int DiemTieuChi { get; set; }
+        public Nullable<int> DiemMin { get; set; }
     
         public virtual BoTieuChi BoTieuChi { get; set; }
         public virtual TieuChi TieuChi { get; set; }

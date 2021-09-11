@@ -42,15 +42,15 @@
 			DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
 			this.label4 = new System.Windows.Forms.Label();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-			this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-			this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-			this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+			this.txtLoaiTaiKhoan = new DevExpress.XtraEditors.TextEdit();
+			this.btnCapNhatThongTin = new DevExpress.XtraEditors.SimpleButton();
+			this.txtTenHienThi = new DevExpress.XtraEditors.TextEdit();
+			this.txtTenDangNhap = new DevExpress.XtraEditors.TextEdit();
 			this.label1 = new System.Windows.Forms.Label();
-			this.btnCapNhat = new DevExpress.XtraEditors.SimpleButton();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.btnCapNhatMK = new DevExpress.XtraEditors.SimpleButton();
+			this.txtReEnter = new System.Windows.Forms.TextBox();
+			this.txtNewPass = new System.Windows.Forms.TextBox();
+			this.txtCurrentPass = new System.Windows.Forms.TextBox();
 			this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -64,9 +64,9 @@
 			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtLoaiTaiKhoan.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtTenHienThi.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -91,16 +91,16 @@
 			// 
 			// layoutControl1
 			// 
-			this.layoutControl1.Controls.Add(this.textEdit3);
-			this.layoutControl1.Controls.Add(this.simpleButton1);
-			this.layoutControl1.Controls.Add(this.textEdit2);
-			this.layoutControl1.Controls.Add(this.textEdit1);
+			this.layoutControl1.Controls.Add(this.txtLoaiTaiKhoan);
+			this.layoutControl1.Controls.Add(this.btnCapNhatThongTin);
+			this.layoutControl1.Controls.Add(this.txtTenHienThi);
+			this.layoutControl1.Controls.Add(this.txtTenDangNhap);
 			this.layoutControl1.Controls.Add(this.label1);
-			this.layoutControl1.Controls.Add(this.btnCapNhat);
-			this.layoutControl1.Controls.Add(this.textBox3);
+			this.layoutControl1.Controls.Add(this.btnCapNhatMK);
+			this.layoutControl1.Controls.Add(this.txtReEnter);
 			this.layoutControl1.Controls.Add(this.label4);
-			this.layoutControl1.Controls.Add(this.textBox2);
-			this.layoutControl1.Controls.Add(this.textBox1);
+			this.layoutControl1.Controls.Add(this.txtNewPass);
+			this.layoutControl1.Controls.Add(this.txtCurrentPass);
 			this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl1.Name = "layoutControl1";
@@ -109,40 +109,41 @@
 			this.layoutControl1.TabIndex = 27;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
-			// textEdit3
+			// txtLoaiTaiKhoan
 			// 
-			this.textEdit3.Location = new System.Drawing.Point(104, 242);
-			this.textEdit3.Name = "textEdit3";
-			this.textEdit3.Properties.ReadOnly = true;
-			this.textEdit3.Size = new System.Drawing.Size(283, 20);
-			this.textEdit3.StyleController = this.layoutControl1;
-			this.textEdit3.TabIndex = 32;
+			this.txtLoaiTaiKhoan.Location = new System.Drawing.Point(104, 242);
+			this.txtLoaiTaiKhoan.Name = "txtLoaiTaiKhoan";
+			this.txtLoaiTaiKhoan.Properties.ReadOnly = true;
+			this.txtLoaiTaiKhoan.Size = new System.Drawing.Size(283, 20);
+			this.txtLoaiTaiKhoan.StyleController = this.layoutControl1;
+			this.txtLoaiTaiKhoan.TabIndex = 32;
 			// 
-			// simpleButton1
+			// btnCapNhatThongTin
 			// 
-			this.simpleButton1.Location = new System.Drawing.Point(264, 319);
-			this.simpleButton1.Name = "simpleButton1";
-			this.simpleButton1.Size = new System.Drawing.Size(123, 22);
-			this.simpleButton1.StyleController = this.layoutControl1;
-			this.simpleButton1.TabIndex = 31;
-			this.simpleButton1.Text = "Cập nhật thông tin";
+			this.btnCapNhatThongTin.Location = new System.Drawing.Point(264, 319);
+			this.btnCapNhatThongTin.Name = "btnCapNhatThongTin";
+			this.btnCapNhatThongTin.Size = new System.Drawing.Size(123, 22);
+			this.btnCapNhatThongTin.StyleController = this.layoutControl1;
+			this.btnCapNhatThongTin.TabIndex = 31;
+			this.btnCapNhatThongTin.Text = "Cập nhật thông tin";
+			this.btnCapNhatThongTin.Click += new System.EventHandler(this.btnCapNhatThongTin_Click);
 			// 
-			// textEdit2
+			// txtTenHienThi
 			// 
-			this.textEdit2.Location = new System.Drawing.Point(104, 165);
-			this.textEdit2.Name = "textEdit2";
-			this.textEdit2.Size = new System.Drawing.Size(283, 20);
-			this.textEdit2.StyleController = this.layoutControl1;
-			this.textEdit2.TabIndex = 30;
+			this.txtTenHienThi.Location = new System.Drawing.Point(104, 165);
+			this.txtTenHienThi.Name = "txtTenHienThi";
+			this.txtTenHienThi.Size = new System.Drawing.Size(283, 20);
+			this.txtTenHienThi.StyleController = this.layoutControl1;
+			this.txtTenHienThi.TabIndex = 30;
 			// 
-			// textEdit1
+			// txtTenDangNhap
 			// 
-			this.textEdit1.Location = new System.Drawing.Point(104, 88);
-			this.textEdit1.Name = "textEdit1";
-			this.textEdit1.Properties.ReadOnly = true;
-			this.textEdit1.Size = new System.Drawing.Size(283, 20);
-			this.textEdit1.StyleController = this.layoutControl1;
-			this.textEdit1.TabIndex = 29;
+			this.txtTenDangNhap.Location = new System.Drawing.Point(104, 88);
+			this.txtTenDangNhap.Name = "txtTenDangNhap";
+			this.txtTenDangNhap.Properties.ReadOnly = true;
+			this.txtTenDangNhap.Size = new System.Drawing.Size(283, 20);
+			this.txtTenDangNhap.StyleController = this.layoutControl1;
+			this.txtTenDangNhap.TabIndex = 29;
 			// 
 			// label1
 			// 
@@ -153,39 +154,40 @@
 			this.label1.TabIndex = 28;
 			this.label1.Text = "Thông tin tài khoản";
 			// 
-			// btnCapNhat
+			// btnCapNhatMK
 			// 
-			this.btnCapNhat.Appearance.BackColor = System.Drawing.SystemColors.Highlight;
-			this.btnCapNhat.Appearance.Options.UseBackColor = true;
-			this.btnCapNhat.AppearanceHovered.BackColor = System.Drawing.SystemColors.HotTrack;
-			this.btnCapNhat.AppearanceHovered.Options.UseBackColor = true;
-			this.btnCapNhat.Location = new System.Drawing.Point(729, 319);
-			this.btnCapNhat.Name = "btnCapNhat";
-			this.btnCapNhat.Size = new System.Drawing.Size(123, 22);
-			this.btnCapNhat.StyleController = this.layoutControl1;
-			this.btnCapNhat.TabIndex = 24;
-			this.btnCapNhat.Text = "Cập nhật mật khẩu";
+			this.btnCapNhatMK.Appearance.BackColor = System.Drawing.SystemColors.Highlight;
+			this.btnCapNhatMK.Appearance.Options.UseBackColor = true;
+			this.btnCapNhatMK.AppearanceHovered.BackColor = System.Drawing.SystemColors.HotTrack;
+			this.btnCapNhatMK.AppearanceHovered.Options.UseBackColor = true;
+			this.btnCapNhatMK.Location = new System.Drawing.Point(729, 319);
+			this.btnCapNhatMK.Name = "btnCapNhatMK";
+			this.btnCapNhatMK.Size = new System.Drawing.Size(123, 22);
+			this.btnCapNhatMK.StyleController = this.layoutControl1;
+			this.btnCapNhatMK.TabIndex = 24;
+			this.btnCapNhatMK.Text = "Cập nhật mật khẩu";
+			this.btnCapNhatMK.Click += new System.EventHandler(this.btnCapNhatMK_Click);
 			// 
-			// textBox3
+			// txtReEnter
 			// 
-			this.textBox3.Location = new System.Drawing.Point(567, 242);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(285, 20);
-			this.textBox3.TabIndex = 23;
+			this.txtReEnter.Location = new System.Drawing.Point(567, 242);
+			this.txtReEnter.Name = "txtReEnter";
+			this.txtReEnter.Size = new System.Drawing.Size(285, 20);
+			this.txtReEnter.TabIndex = 23;
 			// 
-			// textBox2
+			// txtNewPass
 			// 
-			this.textBox2.Location = new System.Drawing.Point(567, 165);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(285, 20);
-			this.textBox2.TabIndex = 22;
+			this.txtNewPass.Location = new System.Drawing.Point(567, 165);
+			this.txtNewPass.Name = "txtNewPass";
+			this.txtNewPass.Size = new System.Drawing.Size(285, 20);
+			this.txtNewPass.TabIndex = 22;
 			// 
-			// textBox1
+			// txtCurrentPass
 			// 
-			this.textBox1.Location = new System.Drawing.Point(567, 88);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(285, 20);
-			this.textBox1.TabIndex = 21;
+			this.txtCurrentPass.Location = new System.Drawing.Point(567, 88);
+			this.txtCurrentPass.Name = "txtCurrentPass";
+			this.txtCurrentPass.Size = new System.Drawing.Size(285, 20);
+			this.txtCurrentPass.TabIndex = 21;
 			// 
 			// Root
 			// 
@@ -247,7 +249,7 @@
 			// 
 			// layoutControlItem2
 			// 
-			this.layoutControlItem2.Control = this.textBox1;
+			this.layoutControlItem2.Control = this.txtCurrentPass;
 			this.layoutControlItem2.Location = new System.Drawing.Point(463, 76);
 			this.layoutControlItem2.Name = "layoutControlItem2";
 			this.layoutControlItem2.OptionsTableLayoutItem.ColumnIndex = 4;
@@ -259,7 +261,7 @@
 			// 
 			// layoutControlItem3
 			// 
-			this.layoutControlItem3.Control = this.textBox2;
+			this.layoutControlItem3.Control = this.txtNewPass;
 			this.layoutControlItem3.Location = new System.Drawing.Point(463, 153);
 			this.layoutControlItem3.Name = "layoutControlItem3";
 			this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 4;
@@ -271,7 +273,7 @@
 			// 
 			// layoutControlItem4
 			// 
-			this.layoutControlItem4.Control = this.textBox3;
+			this.layoutControlItem4.Control = this.txtReEnter;
 			this.layoutControlItem4.Location = new System.Drawing.Point(463, 230);
 			this.layoutControlItem4.Name = "layoutControlItem4";
 			this.layoutControlItem4.OptionsTableLayoutItem.ColumnIndex = 4;
@@ -304,7 +306,7 @@
 			// 
 			// layoutControlItem8
 			// 
-			this.layoutControlItem8.Control = this.textEdit1;
+			this.layoutControlItem8.Control = this.txtTenDangNhap;
 			this.layoutControlItem8.Location = new System.Drawing.Point(0, 76);
 			this.layoutControlItem8.Name = "layoutControlItem8";
 			this.layoutControlItem8.OptionsTableLayoutItem.ColumnSpan = 3;
@@ -315,7 +317,7 @@
 			// 
 			// layoutControlItem10
 			// 
-			this.layoutControlItem10.Control = this.simpleButton1;
+			this.layoutControlItem10.Control = this.btnCapNhatThongTin;
 			this.layoutControlItem10.Location = new System.Drawing.Point(252, 307);
 			this.layoutControlItem10.Name = "layoutControlItem10";
 			this.layoutControlItem10.OptionsTableLayoutItem.ColumnIndex = 2;
@@ -326,7 +328,7 @@
 			// 
 			// layoutControlItem9
 			// 
-			this.layoutControlItem9.Control = this.textEdit2;
+			this.layoutControlItem9.Control = this.txtTenHienThi;
 			this.layoutControlItem9.Location = new System.Drawing.Point(0, 153);
 			this.layoutControlItem9.Name = "layoutControlItem9";
 			this.layoutControlItem9.OptionsTableLayoutItem.ColumnSpan = 3;
@@ -337,7 +339,7 @@
 			// 
 			// layoutControlItem11
 			// 
-			this.layoutControlItem11.Control = this.textEdit3;
+			this.layoutControlItem11.Control = this.txtLoaiTaiKhoan;
 			this.layoutControlItem11.Location = new System.Drawing.Point(0, 230);
 			this.layoutControlItem11.Name = "layoutControlItem11";
 			this.layoutControlItem11.OptionsTableLayoutItem.ColumnSpan = 3;
@@ -348,7 +350,7 @@
 			// 
 			// layoutControlItem6
 			// 
-			this.layoutControlItem6.Control = this.btnCapNhat;
+			this.layoutControlItem6.Control = this.btnCapNhatMK;
 			this.layoutControlItem6.Location = new System.Drawing.Point(717, 307);
 			this.layoutControlItem6.Name = "layoutControlItem6";
 			this.layoutControlItem6.OptionsTableLayoutItem.ColumnIndex = 6;
@@ -366,9 +368,9 @@
 			this.Size = new System.Drawing.Size(864, 404);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
 			this.layoutControl1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtLoaiTaiKhoan.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtTenHienThi.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -387,15 +389,15 @@
         #endregion
 
 		private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.SimpleButton btnCapNhat;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox1;
+        private DevExpress.XtraEditors.SimpleButton btnCapNhatMK;
+        private System.Windows.Forms.TextBox txtReEnter;
+        private System.Windows.Forms.TextBox txtNewPass;
+		private System.Windows.Forms.TextBox txtCurrentPass;
 		private DevExpress.XtraLayout.LayoutControl layoutControl1;
 		private DevExpress.XtraLayout.LayoutControlGroup Root;
-		private DevExpress.XtraEditors.SimpleButton simpleButton1;
-		private DevExpress.XtraEditors.TextEdit textEdit2;
-		private DevExpress.XtraEditors.TextEdit textEdit1;
+		private DevExpress.XtraEditors.SimpleButton btnCapNhatThongTin;
+		private DevExpress.XtraEditors.TextEdit txtTenHienThi;
+		private DevExpress.XtraEditors.TextEdit txtTenDangNhap;
 		private System.Windows.Forms.Label label1;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
@@ -404,7 +406,7 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-		private DevExpress.XtraEditors.TextEdit textEdit3;
+		private DevExpress.XtraEditors.TextEdit txtLoaiTaiKhoan;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;

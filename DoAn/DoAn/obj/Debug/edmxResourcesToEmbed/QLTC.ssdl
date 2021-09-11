@@ -7,10 +7,9 @@
     <Property Name="IDBoTieuChi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HocKy" Type="int" Nullable="false" />
     <Property Name="NamHoc" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="MaNhom" Type="int" />
-    <Property Name="DiemNhom" Type="int" Nullable="false" />
     <Property Name="IDNguoiTao" Type="int" />
     <Property Name="NgayTao" Type="datetime" Nullable="false" />
+    <Property Name="isActive" Type="int" />
   </EntityType>
   <EntityType Name="ChiTietBoTieuChi">
     <Key>
@@ -20,6 +19,7 @@
     <Property Name="IDBoTieuChi" Type="int" />
     <Property Name="MaTieuChi" Type="int" />
     <Property Name="DiemTieuChi" Type="int" Nullable="false" />
+    <Property Name="DiemMin" Type="int" />
   </EntityType>
   <EntityType Name="DiemTuyChon">
     <Key>
@@ -67,7 +67,7 @@
     <Property Name="MaTieuChi" Type="int" />
     <Property Name="NoiDungTuyChon" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <Association Name="FK__BoTieuChi__IDNgu__1CF15040">
+  <Association Name="FK__BoTieuChi__IDNgu__1BFD2C07">
     <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
     <End Role="BoTieuChi" Type="Self.BoTieuChi" Multiplicity="*" />
     <ReferentialConstraint>
@@ -79,19 +79,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BoTieuChi__MaNho__1BFD2C07">
-    <End Role="NhomTieuChi" Type="Self.NhomTieuChi" Multiplicity="0..1" />
-    <End Role="BoTieuChi" Type="Self.BoTieuChi" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhomTieuChi">
-        <PropertyRef Name="MaNhom" />
-      </Principal>
-      <Dependent Role="BoTieuChi">
-        <PropertyRef Name="MaNhom" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ChiTietBo__IDBoT__20C1E124">
+  <Association Name="FK__ChiTietBo__IDBoT__1ED998B2">
     <End Role="BoTieuChi" Type="Self.BoTieuChi" Multiplicity="0..1" />
     <End Role="ChiTietBoTieuChi" Type="Self.ChiTietBoTieuChi" Multiplicity="*" />
     <ReferentialConstraint>
@@ -103,7 +91,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietBo__MaTie__21B6055D">
+  <Association Name="FK__ChiTietBo__MaTie__1FCDBCEB">
     <End Role="TieuChi" Type="Self.TieuChi" Multiplicity="0..1" />
     <End Role="ChiTietBoTieuChi" Type="Self.ChiTietBoTieuChi" Multiplicity="*" />
     <ReferentialConstraint>
@@ -115,7 +103,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DiemTuyCh__IDChi__24927208">
+  <Association Name="FK__DiemTuyCh__IDChi__22AA2996">
     <End Role="ChiTietBoTieuChi" Type="Self.ChiTietBoTieuChi" Multiplicity="0..1" />
     <End Role="DiemTuyChon" Type="Self.DiemTuyChon" Multiplicity="*" />
     <ReferentialConstraint>
@@ -127,7 +115,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DiemTuyCh__MaTuy__25869641">
+  <Association Name="FK__DiemTuyCh__MaTuy__239E4DCF">
     <End Role="TuyChonTieuChi" Type="Self.TuyChonTieuChi" Multiplicity="0..1" />
     <End Role="DiemTuyChon" Type="Self.DiemTuyChon" Multiplicity="*" />
     <ReferentialConstraint>
@@ -183,27 +171,23 @@
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TieuChi" EntityType="Self.TieuChi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TuyChonTieuChi" EntityType="Self.TuyChonTieuChi" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__BoTieuChi__IDNgu__1CF15040" Association="Self.FK__BoTieuChi__IDNgu__1CF15040">
+    <AssociationSet Name="FK__BoTieuChi__IDNgu__1BFD2C07" Association="Self.FK__BoTieuChi__IDNgu__1BFD2C07">
       <End Role="TaiKhoan" EntitySet="TaiKhoan" />
       <End Role="BoTieuChi" EntitySet="BoTieuChi" />
     </AssociationSet>
-    <AssociationSet Name="FK__BoTieuChi__MaNho__1BFD2C07" Association="Self.FK__BoTieuChi__MaNho__1BFD2C07">
-      <End Role="NhomTieuChi" EntitySet="NhomTieuChi" />
-      <End Role="BoTieuChi" EntitySet="BoTieuChi" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ChiTietBo__IDBoT__20C1E124" Association="Self.FK__ChiTietBo__IDBoT__20C1E124">
+    <AssociationSet Name="FK__ChiTietBo__IDBoT__1ED998B2" Association="Self.FK__ChiTietBo__IDBoT__1ED998B2">
       <End Role="BoTieuChi" EntitySet="BoTieuChi" />
       <End Role="ChiTietBoTieuChi" EntitySet="ChiTietBoTieuChi" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietBo__MaTie__21B6055D" Association="Self.FK__ChiTietBo__MaTie__21B6055D">
+    <AssociationSet Name="FK__ChiTietBo__MaTie__1FCDBCEB" Association="Self.FK__ChiTietBo__MaTie__1FCDBCEB">
       <End Role="TieuChi" EntitySet="TieuChi" />
       <End Role="ChiTietBoTieuChi" EntitySet="ChiTietBoTieuChi" />
     </AssociationSet>
-    <AssociationSet Name="FK__DiemTuyCh__IDChi__24927208" Association="Self.FK__DiemTuyCh__IDChi__24927208">
+    <AssociationSet Name="FK__DiemTuyCh__IDChi__22AA2996" Association="Self.FK__DiemTuyCh__IDChi__22AA2996">
       <End Role="ChiTietBoTieuChi" EntitySet="ChiTietBoTieuChi" />
       <End Role="DiemTuyChon" EntitySet="DiemTuyChon" />
     </AssociationSet>
-    <AssociationSet Name="FK__DiemTuyCh__MaTuy__25869641" Association="Self.FK__DiemTuyCh__MaTuy__25869641">
+    <AssociationSet Name="FK__DiemTuyCh__MaTuy__239E4DCF" Association="Self.FK__DiemTuyCh__MaTuy__239E4DCF">
       <End Role="TuyChonTieuChi" EntitySet="TuyChonTieuChi" />
       <End Role="DiemTuyChon" EntitySet="DiemTuyChon" />
     </AssociationSet>

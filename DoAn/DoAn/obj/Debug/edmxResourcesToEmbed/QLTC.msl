@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="QuanLyTieuChuanTieuChiModelStoreContainer" CdmEntityContainer="QuanLyTieuChuanTieuChiEntities">
+  <EntityContainerMapping StorageEntityContainer="QuanLyTieuChuanTieuChiModelStoreContainer" CdmEntityContainer="QLTCTC">
     <EntitySetMapping Name="BoTieuChis">
       <EntityTypeMapping TypeName="QuanLyTieuChuanTieuChiModel.BoTieuChi">
         <MappingFragment StoreEntitySet="BoTieuChi">
           <ScalarProperty Name="IDBoTieuChi" ColumnName="IDBoTieuChi" />
           <ScalarProperty Name="HocKy" ColumnName="HocKy" />
           <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
-          <ScalarProperty Name="MaNhom" ColumnName="MaNhom" />
-          <ScalarProperty Name="DiemNhom" ColumnName="DiemNhom" />
           <ScalarProperty Name="IDNguoiTao" ColumnName="IDNguoiTao" />
           <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -21,6 +20,7 @@
           <ScalarProperty Name="IDBoTieuChi" ColumnName="IDBoTieuChi" />
           <ScalarProperty Name="MaTieuChi" ColumnName="MaTieuChi" />
           <ScalarProperty Name="DiemTieuChi" ColumnName="DiemTieuChi" />
+          <ScalarProperty Name="DiemMin" ColumnName="DiemMin" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

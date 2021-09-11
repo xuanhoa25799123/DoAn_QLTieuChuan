@@ -16,7 +16,8 @@ namespace DoAn
     public partial class UCNhomTieuChi : DevExpress.XtraEditors.XtraUserControl
     {
         private static UCNhomTieuChi _instance;
-		QuanLyTieuChuanTieuChiEntities db = new QuanLyTieuChuanTieuChiEntities();
+		QLTCTC db = new QLTCTC();
+		List<NhomTieuChi> NTCValidate = new List<NhomTieuChi>();
         public static UCNhomTieuChi Instance
         {
             get
@@ -40,9 +41,11 @@ namespace DoAn
 		}
 
 		
-		private void LoadDuLieu()
+		public void LoadDuLieu()
 		{
+			//Truy vấn tất cả nhóm tiêu chí từ cơ sở dữ liệu
 			var NhomTieuChi = db.NhomTieuChis;
+			//Đưa vào gridcontrol đề hiển thị
 			grcNhomTieuChi.DataSource = NhomTieuChi.ToList();
 		}
 
@@ -50,9 +53,11 @@ namespace DoAn
 		{
 			GridColumn col = view.Columns["MaNhom"];
 			int MaNhom = Convert.ToInt32(view.GetRowCellValue(row, col));
-			var BoTieuChi = db.BoTieuChis.Where(c => c.MaNhom == MaNhom);
-			List<BoTieuChi> list = BoTieuChi.ToList();
-			return list.Count != 0;
+			
+			var TieuChi = db.TieuChis.Where(c => c.MaNhom == MaNhom);
+			
+			List<TieuChi> listTc = TieuChi.ToList();
+			return (listTc.Count!=0);
 			
 		}
 
@@ -67,16 +72,7 @@ namespace DoAn
 		private void gvNhomTieuChi_RowCellClick(object sender, RowCellClickEventArgs e)
 		{
 			GridView view = sender as GridView;
-			if (view.FocusedColumn.FieldName != "")
-			{
-				//string NhomTieuChi = view.GetRowCellValue(view.FocusedRowHandle, "TenNhom").ToString();
-				//txtNhomTC.Text = NhomTieuChi;
-				//if (!isUsed(view, view.FocusedRowHandle))
-				//	btnCapNhat.Enabled = true;
-				//else
-				//	btnCapNhat.Enabled = false;
-			}
-			else
+			if (view.FocusedColumn.FieldName == "")
 			{
 				if (isUsed(view, view.FocusedRowHandle))
 				{
@@ -84,10 +80,51 @@ namespace DoAn
 				}
 				else
 				{
+					if (MessageBox.Show("Bạn có muốn xóa không", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+				  DialogResult.Yes)
+						return;
+					int MaNhom = Convert.ToInt32(view.GetRowCellValue(view.FocusedRowHandle, "MaNhom"));
+					var result = db.NhomTieuChis.FirstOrDefault(c => c.MaNhom == MaNhom);
+					db.NhomTieuChis.Remove(result);
+					db.SaveChanges();
 					view.DeleteRow(view.FocusedRowHandle);
 					MessageBox.Show("Xóa nhóm tiêu chí thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 			}
+		}
+
+		private void btnThem_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				if (txtNhomTC.Text == "")
+					MessageBox.Show("Chưa nhập đủ thông tin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				else
+				{
+					NhomTieuChi ntc = new NhomTieuChi();
+					ntc.TenNhom = txtNhomTC.Text;
+					db.NhomTieuChis.Add(ntc);
+					db.SaveChanges();
+					MessageBox.Show("Thêm nhóm tiêu chí thành công");
+					txtNhomTC.Text = "";
+					LoadDuLieu();
+				}
+			}
+			catch
+			{
+				MessageBox.Show("Có lỗi khi thêm nhóm tiêu chí");
+			}
+		}
+
+
+
+		private void gvNhomTieuChi_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+		{
+			int MaNhom = Convert.ToInt32(gvNhomTieuChi.GetRowCellValue(gvNhomTieuChi.FocusedRowHandle, "MaNhom"));
+			string TenNhom = gvNhomTieuChi.GetRowCellValue(gvNhomTieuChi.FocusedRowHandle, "TenNhom").ToString();
+			var result = db.NhomTieuChis.FirstOrDefault(c => c.MaNhom == MaNhom);
+			result.TenNhom = TenNhom;
+			db.SaveChanges();
 		}
 
    

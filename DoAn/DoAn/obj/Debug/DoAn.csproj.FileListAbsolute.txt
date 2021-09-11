@@ -26,21 +26,69 @@ D:\Đồ án cơ sở\DoAn\DoAn\DoAn\bin\Debug\EntityFramework.SqlServer.dll
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\bin\Debug\EntityFramework.xml
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\bin\Debug\EntityFramework.SqlServer.xml
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.FormDangNhap.resources
+D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.FrmThemTieuChi_TuyChon.resources
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.FrmTuyChon.resources
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.MainForm.resources
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.Properties.Resources.resources
+D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.ThemTieuChi.resources
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCDoiMatKhau.resources
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCNhomTieuChi.resources
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCQLTaiKhoan.resources
-D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCThongTinTK.resources
-D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCTieuChi.resources
+D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCTaoBoTieuChi.resources
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCTrangChu.resources
-D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.XtraUserControl1.resources
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.csproj.GenerateResource.Cache
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.exe.licenses
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.exe
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.pdb
 D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.csprojResolveAssemblyReference.cache
-D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.ThemTieuChi.resources
-D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCTaoBoTieuChi.resources
-D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.FrmThemTieuChi_TuyChon.resources
+D:\Đồ án cơ sở\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCQLTieuChi.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\bin\Debug\DoAn.exe.config
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.exe
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.pdb
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\bin\Debug\DoAn.exe
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\bin\Debug\DoAn.pdb
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\bin\Debug\EntityFramework.dll
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\bin\Debug\EntityFramework.xml
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.FormDangNhap.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.FrmThemTieuChi_TuyChon.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.FrmTuyChon.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.MainForm.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.Properties.Resources.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.ThemTieuChi.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCDoiMatKhau.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCNhomTieuChi.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCQLTaiKhoan.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCTaoBoTieuChi.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCTrangChu.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.UCQLTieuChi.resources
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.csproj.GenerateResource.Cache
+C:\Users\WINDOWS\Documents\DoAn\DoAn\DoAn\obj\Debug\DoAn.exe.licenses
+C:\Users\WINDOWS\Documents\ChuongTrinh\DoAn\DoAn\bin\Debug\DoAn.exe.config
+C:\Users\WINDOWS\Documents\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.exe
+C:\Users\WINDOWS\Documents\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.pdb
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\bin\Debug\DoAn.exe.config
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.exe
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.pdb
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\bin\Debug\DoAn.exe
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\bin\Debug\DoAn.pdb
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\bin\Debug\EntityFramework.dll
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\bin\Debug\EntityFramework.xml
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.FormDangNhap.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.FrmThemTieuChi_TuyChon.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.FrmTuyChon.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.MainForm.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.Properties.Resources.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.ThemTieuChi.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.UCDoiMatKhau.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.UCNhomTieuChi.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.UCQLTaiKhoan.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.UCTaoBoTieuChi.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.UCTrangChu.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.UCQLTieuChi.resources
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.csproj.GenerateResource.Cache
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.exe.licenses
+C:\Users\WINDOWS\Documents\QLCacTieuChi\ChuongTrinh\DoAn\DoAn\obj\Debug\DoAn.FrmChonNhom.resources

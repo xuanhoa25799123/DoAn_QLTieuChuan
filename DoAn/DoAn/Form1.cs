@@ -15,7 +15,7 @@ namespace DoAn
         {
             InitializeComponent();
         }
-
+		QLTCTC db = new QLTCTC();
         private void txtTaiKhoan_Enter(object sender, EventArgs e)
         {
             if (txtTaiKhoan.Text == "Tên đăng nhập")
@@ -62,10 +62,23 @@ namespace DoAn
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            MainForm f = new MainForm();
-            f.Show();
-            this.Hide();
+			var result = db.TaiKhoans.SingleOrDefault(b => b.TenTaiKhoan == txtTaiKhoan.Text && b.MatKhau == txtMatKhau.Text);
+			if (result != null)
+			{
+				MainForm f = new MainForm(result as TaiKhoan);
+				f.Show();
+				this.Hide();
+			}
+			else
+			{
+				MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+			}      
         }
+
+		private void FormDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Application.Exit();
+		}
 
 
 

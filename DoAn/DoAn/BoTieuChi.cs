@@ -22,13 +22,11 @@ namespace DoAn
         public int IDBoTieuChi { get; set; }
         public int HocKy { get; set; }
         public string NamHoc { get; set; }
-        public Nullable<int> MaNhom { get; set; }
-        public int DiemNhom { get; set; }
         public Nullable<int> IDNguoiTao { get; set; }
         public System.DateTime NgayTao { get; set; }
+        public Nullable<int> isActive { get; set; }
     
         public virtual TaiKhoan TaiKhoan { get; set; }
-        public virtual NhomTieuChi NhomTieuChi { get; set; }
         public virtual ICollection<ChiTietBoTieuChi> ChiTietBoTieuChis { get; set; }
     }
 }

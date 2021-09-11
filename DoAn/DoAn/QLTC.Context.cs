@@ -13,10 +13,10 @@ namespace DoAn
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QuanLyTieuChuanTieuChiEntities : DbContext
+    public partial class QLTCTC : DbContext
     {
-        public QuanLyTieuChuanTieuChiEntities()
-            : base("name=QuanLyTieuChuanTieuChiEntities")
+        public QLTCTC()
+            : base("name=QLTCTC")
         {
         }
     

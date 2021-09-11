@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAn", "DoAn\DoAn.csproj", "{CE662030-0AC1-4276-95A9-BFE84303721C}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QLTieuChiTieuChuanSetup", "QLTieuChiTieuChuanSetup\QLTieuChiTieuChuanSetup.vdproj", "{07A93366-EC1B-404B-921D-44E784C9C30F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{CE662030-0AC1-4276-95A9-BFE84303721C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE662030-0AC1-4276-95A9-BFE84303721C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE662030-0AC1-4276-95A9-BFE84303721C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07A93366-EC1B-404B-921D-44E784C9C30F}.Debug|Any CPU.ActiveCfg = Debug
+		{07A93366-EC1B-404B-921D-44E784C9C30F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

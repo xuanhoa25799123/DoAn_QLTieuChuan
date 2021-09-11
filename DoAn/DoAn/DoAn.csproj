@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoTieuChi+.cs" />
     <Compile Include="BoTieuChi.cs">
       <DependentUpon>QLTC.tt</DependentUpon>
     </Compile>
@@ -87,6 +88,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChonNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChonNhom.Designer.cs">
+      <DependentUpon>FrmChonNhom.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmThemTieuChi_TuyChon.cs">
       <SubType>Form</SubType>
@@ -105,21 +112,6 @@
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="NhomTieuChi.cs">
       <DependentUpon>QLTC.tt</DependentUpon>
@@ -144,6 +136,8 @@
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>QLTC.tt</DependentUpon>
     </Compile>
+    <Compile Include="TCBo.cs" />
+    <Compile Include="TChonBo.cs" />
     <Compile Include="ThemTieuChi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,9 +146,6 @@
     </Compile>
     <Compile Include="TieuChi.cs">
       <DependentUpon>QLTC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TieuChuan.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="TuyChonTieuChi.cs">
       <DependentUpon>QLTC.tt</DependentUpon>
@@ -183,32 +174,23 @@
     <Compile Include="UCTaoBoTieuChi.Designer.cs">
       <DependentUpon>UCTaoBoTieuChi.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCThongTinTK.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCThongTinTK.Designer.cs">
-      <DependentUpon>UCThongTinTK.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UCTieuChi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCTieuChi.Designer.cs">
-      <DependentUpon>UCTieuChi.cs</DependentUpon>
-    </Compile>
     <Compile Include="UCTrangChu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCTrangChu.Designer.cs">
       <DependentUpon>UCTrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="XtraUserControl1.cs">
+    <Compile Include="UCQLTieuChi.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="XtraUserControl1.Designer.cs">
-      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    <Compile Include="UCQLTieuChi.Designer.cs">
+      <DependentUpon>UCQLTieuChi.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChonNhom.resx">
+      <DependentUpon>FrmChonNhom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThemTieuChi_TuyChon.resx">
       <DependentUpon>FrmThemTieuChi_TuyChon.cs</DependentUpon>
@@ -245,25 +227,14 @@
     <EmbeddedResource Include="UCTaoBoTieuChi.resx">
       <DependentUpon>UCTaoBoTieuChi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCThongTinTK.resx">
-      <DependentUpon>UCThongTinTK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCTieuChi.resx">
-      <DependentUpon>UCTieuChi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UCTrangChu.resx">
       <DependentUpon>UCTrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XtraUserControl1.resx">
-      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="UCQLTieuChi.resx">
+      <DependentUpon>UCQLTieuChi.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -287,16 +258,9 @@
     <None Include="Resources\tải xuống.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="QLTC.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QLTC.edmx</DependentUpon>
@@ -307,9 +271,6 @@
       <DependentUpon>QLTC.edmx</DependentUpon>
       <LastGenOutput>QLTC.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

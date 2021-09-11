@@ -129,8 +129,10 @@
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.panel1);
+			this.MaximizeBox = false;
 			this.Name = "FormDangNhap";
 			this.Text = "Đăng nhập";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDangNhap_FormClosed);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

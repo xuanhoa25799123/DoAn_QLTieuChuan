@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemTieuChi));
 			DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
 			DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
 			DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
@@ -39,10 +40,11 @@
 			DevExpress.XtraLayout.RowDefinition rowDefinition7 = new DevExpress.XtraLayout.RowDefinition();
 			DevExpress.XtraLayout.RowDefinition rowDefinition8 = new DevExpress.XtraLayout.RowDefinition();
 			DevExpress.XtraLayout.RowDefinition rowDefinition9 = new DevExpress.XtraLayout.RowDefinition();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemTieuChi));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.btnThemTieuChi = new DevExpress.XtraEditors.SimpleButton();
 			this.txtMoTaTieuChi = new DevExpress.XtraEditors.MemoEdit();
 			this.txtNoiDungTieuChi = new DevExpress.XtraEditors.MemoEdit();
+			this.btnThemTuyChon = new DevExpress.XtraEditors.SimpleButton();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.rbMultiplechoice = new System.Windows.Forms.RadioButton();
 			this.rbSingleChoice = new System.Windows.Forms.RadioButton();
@@ -51,11 +53,9 @@
 			this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.btnThemTieuChi = new DevExpress.XtraEditors.SimpleButton();
-			this.btnThemTuyChon = new DevExpress.XtraEditors.SimpleButton();
-			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
@@ -66,9 +66,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -88,6 +88,17 @@
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
+			// btnThemTieuChi
+			// 
+			this.btnThemTieuChi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemTieuChi.ImageOptions.Image")));
+			this.btnThemTieuChi.Location = new System.Drawing.Point(367, 252);
+			this.btnThemTieuChi.Name = "btnThemTieuChi";
+			this.btnThemTieuChi.Size = new System.Drawing.Size(114, 22);
+			this.btnThemTieuChi.StyleController = this.layoutControl1;
+			this.btnThemTieuChi.TabIndex = 8;
+			this.btnThemTieuChi.Text = "Thêm tiêu chí";
+			this.btnThemTieuChi.Click += new System.EventHandler(this.btnThemTieuChi_Click);
+			// 
 			// txtMoTaTieuChi
 			// 
 			this.txtMoTaTieuChi.Location = new System.Drawing.Point(122, 178);
@@ -105,6 +116,17 @@
 			this.txtNoiDungTieuChi.Size = new System.Drawing.Size(359, 51);
 			this.txtNoiDungTieuChi.StyleController = this.layoutControl1;
 			this.txtNoiDungTieuChi.TabIndex = 7;
+			// 
+			// btnThemTuyChon
+			// 
+			this.btnThemTuyChon.Enabled = false;
+			this.btnThemTuyChon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemTuyChon.ImageOptions.Image")));
+			this.btnThemTuyChon.Location = new System.Drawing.Point(367, 58);
+			this.btnThemTuyChon.Name = "btnThemTuyChon";
+			this.btnThemTuyChon.Size = new System.Drawing.Size(114, 22);
+			this.btnThemTuyChon.StyleController = this.layoutControl1;
+			this.btnThemTuyChon.TabIndex = 6;
+			this.btnThemTuyChon.Text = "Thêm tùy chọn";
 			// 
 			// panel1
 			// 
@@ -229,6 +251,17 @@
 			this.layoutControlItem2.Text = "Kiểu hiển thị tùy chọn:";
 			this.layoutControlItem2.TextSize = new System.Drawing.Size(107, 13);
 			// 
+			// layoutControlItem3
+			// 
+			this.layoutControlItem3.Control = this.btnThemTuyChon;
+			this.layoutControlItem3.Location = new System.Drawing.Point(355, 46);
+			this.layoutControlItem3.Name = "layoutControlItem3";
+			this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 1;
+			this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 2;
+			this.layoutControlItem3.Size = new System.Drawing.Size(118, 27);
+			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem3.TextVisible = false;
+			// 
 			// layoutControlItem4
 			// 
 			this.layoutControlItem4.Control = this.txtNoiDungTieuChi;
@@ -251,38 +284,6 @@
 			this.layoutControlItem5.Text = "Mô tả tiêu chí:";
 			this.layoutControlItem5.TextSize = new System.Drawing.Size(107, 13);
 			// 
-			// btnThemTieuChi
-			// 
-			this.btnThemTieuChi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemTieuChi.ImageOptions.Image")));
-			this.btnThemTieuChi.Location = new System.Drawing.Point(367, 252);
-			this.btnThemTieuChi.Name = "btnThemTieuChi";
-			this.btnThemTieuChi.Size = new System.Drawing.Size(114, 22);
-			this.btnThemTieuChi.StyleController = this.layoutControl1;
-			this.btnThemTieuChi.TabIndex = 8;
-			this.btnThemTieuChi.Text = "Thêm tiêu chí";
-			// 
-			// btnThemTuyChon
-			// 
-			this.btnThemTuyChon.Enabled = false;
-			this.btnThemTuyChon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemTuyChon.ImageOptions.Image")));
-			this.btnThemTuyChon.Location = new System.Drawing.Point(367, 58);
-			this.btnThemTuyChon.Name = "btnThemTuyChon";
-			this.btnThemTuyChon.Size = new System.Drawing.Size(114, 22);
-			this.btnThemTuyChon.StyleController = this.layoutControl1;
-			this.btnThemTuyChon.TabIndex = 6;
-			this.btnThemTuyChon.Text = "Thêm tùy chọn";
-			// 
-			// layoutControlItem3
-			// 
-			this.layoutControlItem3.Control = this.btnThemTuyChon;
-			this.layoutControlItem3.Location = new System.Drawing.Point(355, 46);
-			this.layoutControlItem3.Name = "layoutControlItem3";
-			this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 1;
-			this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 2;
-			this.layoutControlItem3.Size = new System.Drawing.Size(118, 27);
-			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem3.TextVisible = false;
-			// 
 			// layoutControlItem6
 			// 
 			this.layoutControlItem6.Control = this.btnThemTieuChi;
@@ -302,6 +303,7 @@
 			this.Controls.Add(this.layoutControl1);
 			this.Name = "ThemTieuChi";
 			this.Text = "Thêm tiêu chí";
+			this.Load += new System.EventHandler(this.ThemTieuChi_Load);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
 			this.layoutControl1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.txtMoTaTieuChi.Properties)).EndInit();
@@ -312,9 +314,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
 			this.ResumeLayout(false);
 
